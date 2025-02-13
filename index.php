@@ -122,7 +122,8 @@ $mysqli->close();
 <body>
 <?php
     include 'header.php';
-    include 'chengeballance.php'
+    include 'chengeballance.php';
+    include 'assistent.php';
 ?>
 <div id="content">
     

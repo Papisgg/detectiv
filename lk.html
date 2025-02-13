@@ -1,27 +1,6 @@
 
     <main class="main">
-        <button class="header_btn asistent"><span>Online Assistant</span><img src="img/asitent_btn.png">
-            <input class="asistent_input" type="checkbox" name="" id="myCheckbox">
-            <div class="asistent_cont" id="block2">
-                <div class="shapka">
-                    <img class="asistent_logo" src="img/Frame_74.png" alt="none">
-                    <div>
-                        <h1 class="asistent_title">Assistant</h1>
-                        <p class="asistent_subtitle">Online</p>
-                    </div>
-                    <div class="close" id="block1"></div>
-                </div>
-                <div class="message" id="messages">
-                </div>
-                <form class="form" id="contactForm" method="post">
-                    <div class="form__item">
-                        <textarea class="form__input" id="form__input" name="message" required placeholder="Write a message"></textarea>
-                    </div>
-                    <input type="submit" class="form__input btn" id="submit" value="Send">
-                    <input type="hidden" name="act" value="order">
-                </form>
-            </div>
-        </button>
+        
         <div class="page lk">
             <div class="lk_info">
                 <div class="username_cont">
@@ -46,7 +25,7 @@
                 </button>
             </div>
 
-            <img class="security" src="img/Frame95.webp" alt="">
+            <img class="security" src="img/Frame95.svg" alt="">
             <div>
                 <button id="leftButton"></button>
                 <button id="rightButton"></button>
@@ -56,7 +35,7 @@
                 <form class="transaction-form" id="transaction-form">
                     <img class="replenish_close" src="img/replenish_close.svg" alt="">
                     <label class="form_label" for="amount">The amount of the deposit</label>
-                    <input class="transaction_form_input" type="number" name="amount" placeholder="0.000 btc" required>
+                    <input class="transaction_form_input" type="number" step="any" name="amount" placeholder="0.000 btc" required>
                     <label class="form_label" for="amount">Don't forget to write a comment</label>
                     <div class="comment_cont first_input_comment">
                         <input class="transaction_form_input comment" type="text" class="comment" name="comment" placeholder="">

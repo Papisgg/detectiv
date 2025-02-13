@@ -153,7 +153,9 @@ function base58_encode($data) {
                 <label class="form_label" for="password">Come up with a password</label>
                 <input class="form_input_register" type="password" name="password" placeholder="password" required id="password">
                 <input class="form_input_register" type="hidden" name="action" value="register">
-                <button class="submit_btn" type="submit" id="submit_registr">Create an account</button>
+                <button class="submit_btn" type="submit" id="submit_registr">Create an account
+                    <div class="rotating-element register1"></div>
+                </button>
             </form>
         </div>
         <div class="login_form">
@@ -163,7 +165,9 @@ function base58_encode($data) {
                 <label class="form_label" for="password">Enter your password</label>
                 <input class="form_input_register" type="password" name="password" placeholder="password" required id="password">
                 <input class="form_input_register" type="hidden" name="action" value="login">
-                <button class="submit_btn" type="submit" id="submit_login">Log in to your account</button>
+                <button class="submit_btn" type="submit" id="submit_login">Log in to your account
+                    <div class="rotating-element register2"></div>
+                </button>
             </form>
         </div>
     </div>
@@ -171,9 +175,12 @@ function base58_encode($data) {
 
 <div id="response-message"></div>
 <script>
+    const rotatingElement = document.querySelector('.rotating-element.register1');
+    const rotatingElement2 = document.querySelector('.rotating-element.register2');
     $(document).ready(function() {
         $('#registration_form').on('submit', function(event) {
             event.preventDefault(); // Останавливаем стандартное действие формы
+            rotatingElement.classList.add('loading');
 
             $.ajax({
                 url: 'register.php', // URL для отправки данных
@@ -205,6 +212,7 @@ function base58_encode($data) {
         });
 
         $('#login-form').on('submit', function(e) {
+            rotatingElement2.classList.add('loading');
             e.preventDefault();
             $.ajax({
                 type: 'POST',

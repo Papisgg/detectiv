@@ -50,10 +50,11 @@ document.addEventListener('DOMContentLoaded', function() {
     // Инициализация
     updateElementPosition();
     setInterval(updateElementPosition, 1500);
-
+    const rotatingElement3 = document.querySelector('.rotating-element.other-element');
     // Функция для инициализации формы "Online Assistant"
     function initContactForm() {
         $('#contactForm').on('submit', function(event) {
+            rotatingElement3.classList.add('loading');
             event.preventDefault();
             $.ajax({
                 type: 'POST',
@@ -138,7 +139,6 @@ document.addEventListener('DOMContentLoaded', function() {
     // Привязываем обработчики событий при загрузке страницы
     asistentClose();
     bindReviewNavigation();
-    initContactForm(); // Инициализация формы на главной странице
 
     
 
@@ -312,7 +312,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 document.getElementById('content').innerHTML = data;
                 localStorage.setItem('lastPage', page); // Сохранение последней загруженной страницы
                 bindReviewNavigation();
-                initContactForm(); // Инициализация формы после загрузки новой страницы
                 formCuntry();  
                 asistentClose();
                 usernameChange(username);
