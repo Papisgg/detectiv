@@ -24,10 +24,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 }
 ?>
 
-<form method="post" id="balans_form">
-    <input type="hidden" name="userId" value="<?php echo htmlspecialchars($userId); ?>">
-    <button type="submit">Пополнить баланс</button>
-</form>
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
