@@ -18,7 +18,7 @@ h1, h2, h3, h4, h5, h6, p, a {
 }
 
 body { 
-    background-color: #080808;
+    background-color: #E3FFF5;
 }
 
 .page {
@@ -30,16 +30,16 @@ body {
 .header {
     width: 100%;
     position: fixed;
-    z-index: 0;
+    z-index: 5;
     left: 0;
     top: 0;
     right: 0;
-    background-color: #080808;
+    background-color: #E3FFF5;
 }
 
 .header_cont {
     width: 100%;
-    background-color: #0F0F0F;
+    background-color: #E3FFF5;
 }
 
 .logo_cont {
@@ -49,11 +49,10 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #0F0F0F;
+    background-color: #E3FFF5;
 }
 
 .logo {
-    filter: invert(1);
 }
 
 .header_btn {
@@ -90,7 +89,7 @@ body {
     justify-content: space-between;
     align-items: center;
 
-    background-color: #080808;
+    background-color: #E3FFF5;
 }
 
 .nav_cont .nav_link {
@@ -99,9 +98,9 @@ body {
 
 .nav_link {
     font-size: 20px;
-    font-weight: 400;
-    background-color: #191919;
-    color: #fff;
+    font-weight: 600;
+    background-color: #dedede;
+    color: #000;
     padding: 16px 24px;
     border-radius: 41px;
 }
@@ -123,7 +122,7 @@ body {
     .nav_link {
         font-size: 18px;
         font-weight: 400;
-        background-color: #191919;
+        background-color: #dedede;
         color: #fff;
         padding: 14px 20px;
         border-radius: 41px;
@@ -138,7 +137,7 @@ body {
     .nav_link {
         font-size: 16px;
         font-weight: 400;
-        background-color: #191919;
+        background-color: #dedede;
         color: #fff;
         padding: 14px 20px;
         border-radius: 41px;
@@ -199,6 +198,7 @@ body {
     top: 0;
     left: 0;
     background-color: #fff;
+    filter: invert(1);
     transform-origin: center;
     transition: all 0.3s; /* Измените на 0.3s для более быстрого эффекта */
 }
@@ -211,6 +211,7 @@ body {
     bottom: 0;
     left: 0;
     background-color: #fff;
+    filter: invert(1);
     transform-origin: center;
     transition: transform 0.3s; /* Измените на 0.3s для более быстрого эффекта */
 }
@@ -234,7 +235,7 @@ body {
     padding-top: 11px;
     left: -150%; /* Скрываем меню */
     transition: left 0.3s; /* Плавное изменение позиции */
-    background-color: #0F0F0F;
+    background-color: #E3FFF5;
 }
 
 .burger_input:checked ~ .burger_menu {
@@ -245,7 +246,6 @@ body {
     display: block;
     font-size: 36px;
     font-weight: 700;
-    color: #FFF;
     margin-bottom: 21px;
 }
 
@@ -310,10 +310,30 @@ body {
 }
 
 .plashka {
-    padding: 32px;
+    position: relative;
+    padding: 40px;
     padding-bottom: 4px ;
     border-radius: 16px;
-    background-color: #171717;
+    overflow: hidden;
+    background-color: #E3FFF5;
+}
+
+.plashka * {
+    position: relative;
+    z-index: 1;
+}
+
+.plashka::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #F7ECEC; /* Цвет фона самого div */
+    border-radius: 12px; /* Скругление внутреннего края */
+    z-index: 0; /* Чтобы контент был поверх псевдоэлемента */
+    margin: 25px; /* Отступ для padding */
 }
 
 .colum .plashka:first-child {
@@ -323,19 +343,23 @@ body {
 .plashka_title {
     font-size: 36px;
     font-weight: 500;
-    color: #FFF;
+    color: #000;
+    position: relative;
+    z-index: 1;
     margin-bottom: 20px;
 }
 
 .plashka_text {
     font-size: 20px;
     font-weight: 400;
-    color: #E2E2E2;
+    color: #000;
+    position: relative;
+    z-index: 1;
     margin-bottom: 28px;
 }
 
 .plashka_subtitle {
-    color: #fff;
+    color: #000;
 }
 
 .revivews_btn_cont {
@@ -352,7 +376,7 @@ body {
     border: none;
     border-radius: 1000px;
 
-    background-color: #212121;
+    background-color: #77b9a1;
 }
 
 .next_btn:first-child {
@@ -361,7 +385,6 @@ body {
 
 .revive {
     padding: 24px;
-    background-color: #212121;
     margin-bottom: 16px;
 
     border-radius: 16px;
@@ -387,27 +410,23 @@ body {
 .nik {
     font-size: 24px;
     font-weight: 400;
-    color: #fff;
 }
 
 .city {
     font-size: 20px;
     font-weight: 400;
-    color: #e2e2e2;
     margin-top: auto;
 }
 
 .date {
     font-size: 20px;
     font-weight: 400;
-    color: rgba(255, 255, 255, .42);
     margin-left: auto;
 }
 
 .revive_text {
     font-size: 24px;
     font-weight: 400;
-    color: #fff;
     margin-top: 30px;
 }
 
@@ -433,7 +452,7 @@ body {
     color: #E2E2E2;
     border: none;
     border-radius: 21px;
-    background-color: #212121;
+    background-color: #E0DADA;
 }
 
 .form_textarea {
@@ -460,13 +479,17 @@ body {
         padding-bottom: 1px;
     }
 
+    .plashka::before {
+        margin: 10px;
+    }
+
     .plashka_title {
-        font-size: 20px; 
+        font-size: 16px; 
         margin-bottom: 16px;
     }
 
     .plashka_text {
-        font-size: 16px;
+        font-size: 12px;
         margin-bottom: 16px;
     }
 
@@ -487,8 +510,8 @@ body {
     }
 
     .footer_last .plashka_btn {
-        background-color: #494949;
-        color: #fff;
+        background-color: #dedede;
+        color: #000;
         max-width: 637px;
         margin: 0;
         padding: 12px 0;
@@ -535,8 +558,8 @@ body {
     }
 
     .form_input, .form_textarea {
-        padding: 19px 14px;
-        font-size: 16px;
+        padding: 16px 14px;
+        font-size: 14px;
     }
 
     .form_textarea {
@@ -562,7 +585,7 @@ body {
     margin-top: 125px;
     width: 100%;
     padding: 40px 0 83px 0;
-    background-color: #151516;
+    background-color: #F7ECEC;
 }
 
 .footer_inner {
@@ -575,6 +598,7 @@ body {
 
 .footer_logo {
     max-width: 508px;
+    filter: invert(1);
 }
 
 .footer_cont {
@@ -589,7 +613,6 @@ body {
 .footer_link {
     font-size: 20px;
     font-weight: 400;
-    color: rgba(255, 255, 255, .53);
     display: block;
 }
 
@@ -610,8 +633,8 @@ body {
 }
 
 .footer_last .plashka_btn {
-    background-color: #494949;
-    color: #fff;
+    background-color: #dedede;
+    color: #000;
     max-width: 637px;
     margin: 0;
     padding: 23px 0;
@@ -662,8 +685,8 @@ body {
     }
 
     .footer_last .plashka_btn {
-        background-color: #494949;
-        color: #fff;
+        background-color: #dedede;
+        color: #000;
         margin: 0;
         padding: 12px 0;
     }
@@ -865,7 +888,6 @@ body {
 .big_title {
     font-size: 64px;
     font-weight: 500;
-    color: #fff;
     margin-bottom: 32px;
 }
 
@@ -890,14 +912,13 @@ body {
 
 .plashka_text span {
     font-weight: 700;
-    color: #fff;
+    color: #000;
 }
 
 @media (max-width: 930px) {
     .big_title {
         font-size: 36px;
         font-weight: 500;
-        color: #fff;
         margin-bottom: 16px;
     }
 
@@ -936,7 +957,7 @@ body {
 }
 
 .colum.comments .plashka {
-    margin-bottom: 20px;
+    margin-bottom: -15px;
 }
 
 .colum.comments .revivews_btn_cont,
@@ -966,6 +987,7 @@ body {
     height: 100vh;
     background-color: rgb(8 8 8 / 80%);
     position: fixed;
+    z-index: 999;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -987,7 +1009,26 @@ body {
 
     border-radius: 16px;
 
-    background-color: #0F0F0F;
+    background-color: #E3FFF5;
+}
+
+.opacity_form.open .registration_cont * {
+    position: relative;
+    z-index: 1;
+}
+
+.opacity_form.open .registration_cont::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #F7ECEC; /* Цвет фона самого div */
+    border-radius: 12px; /* Скругление внутреннего края */
+    z-index: 0; /* Чтобы контент был поверх псевдоэлемента */
+    margin: 12px; /* Отступ для padding */
+    
 }
 
 .registration_cont {
@@ -1006,7 +1047,6 @@ body {
     width: 48%;
     height: 50px;
     font-size: 20px;
-    color: #fff;
     font-weight: 700;
     text-align: center;
     padding: 12px 0;
@@ -1014,11 +1054,12 @@ body {
     border: none;
     border-radius: 5px;
 
-    background-color: #191919;
+    background-color: #dedede;
 }
 
 .register_btn.active {
     background-color: #5B27D3;
+    color: #fff;
 }
 
 .login_form, .registration_page  {
@@ -1039,7 +1080,6 @@ body {
     margin-bottom: 14px;
     font-size: 16px;
     font-weight: 400;
-    color: rgba(255, 255, 255, .52);
 }
 
 .form_input_register {
@@ -1049,10 +1089,9 @@ body {
     margin-bottom: 24px;
     font-size: 16px;
     font-weight: 400;
-    color: rgba(255, 255, 255, .52);
     border: none;
     border-radius: 12px;
-    background-color: #191919;
+    background-color: #E0DADA;
 }
 
 .form_input_register:active {
@@ -1086,13 +1125,11 @@ body {
 .info_title {
     font-size: 24px;
     font-weight: 200;
-    color: rgba(255, 255, 255, .41);
 }
 
 .username, .balance {
     font-size: 64px;
     font-weight: 400;
-    color: #FFF;
     margin-top: 16px;
 }
 
@@ -1134,7 +1171,6 @@ body {
         align-items: center;
         width: 100%;
         flex-direction: column;
-        background-color: rgba(255, 255, 255, .17);
     }
 
     .burger_menu .header_btn * {
@@ -1181,14 +1217,12 @@ body {
     .username, .balance {
         font-size: 25px;
         font-weight: 400;
-        color: #FFF;
         margin-top: 11px;
     }
 
     .info_title {
         font-size: 14px;
         font-weight: 200;
-        color: rgba(255, 255, 255, .41);
     }
 
     .security {
@@ -1238,20 +1272,19 @@ body {
         height: 395px;
         padding: 24px 17px;
         border-radius: 16px;
-        background-color: #0F0F0F;
+        background-color: #E3FFF5;
     }
 
     .register_btn {
         width: 48%;
         height: 50px;
         font-size: 20px;
-        color: #fff;
         font-weight: 400;
         text-align: center;
         padding: 12px 0;
         border: none;
         border-radius: 5px;
-        background-color: #191919;
+        background-color: #dedede;
     }
 
     .register_button_cont {
@@ -1267,14 +1300,12 @@ body {
         margin-bottom: 14px;
         font-size: 16px;
         font-weight: 300;
-        color: rgba(255, 255, 255, .52);
     }
 
     .register_btn {
         width: 48%;
         height: 50px;
         font-size: 16px;
-        color: #fff;
         font-weight: 500;
         text-align: center;
         padding: 12px 0;
@@ -1299,6 +1330,7 @@ body {
 .transaction_form_cont {
     display: none;
     position: fixed;
+    z-index: 9999;
     top: 50%;
     left: 50%;
     width: 100vw;
@@ -1320,7 +1352,7 @@ body {
     z-index: 99999;
     transform: translate(-50%, -50%);
     border-radius: 16px;
-    background-color: #0F0F0F;
+    background-color: #F7ECEC;
     padding: 20px;
 }
 
@@ -1328,12 +1360,12 @@ body {
     display: block;
     margin-left: auto;
     margin-bottom: 20px;
+    filter: invert(1);
 }
 
 .transaction_form_input {
-    background-color: #191919;
+    background-color: #E0DADA;
 
-    color: rgba(255, 255, 255, .52);
     display: block;
     width: 100%;
     height: 53px;
@@ -1347,7 +1379,6 @@ body {
 }
 
 .transaction_form_input.comment {
-    color: #fff;
     font-weight: 500;
     position: relative;
 }
@@ -1360,18 +1391,19 @@ body {
     position: absolute;
     top: 15px;
     right: 12px;
+    background-color: inherit;
+    filter: invert(1);
 }
 
 .transaction_form_input.input_address {
-    color: #fff;
     font-weight: 500;
     position: relative;
     margin: 0;
-    background-color: #313030;
+    background-color: #E0DADA;
 }
 
 .address_cont {
-    background-color: #1B1B1B;
+    background-color: #F7ECEC;
     padding: 25px;
     border-radius: 16px;
 }
@@ -1394,10 +1426,11 @@ body {
 
 .first_input_comment img {
     background-color: inherit;
+    filter: invert(1);
 }
 
 .nav_link:hover {
-    background-color: #313131;
+    background-color: #77b9a1;
 }
 
 .header_btn:hover {
