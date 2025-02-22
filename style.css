@@ -45,7 +45,7 @@ body {
 .logo_cont {
     width: 100%;
     margin: 0 auto;
-    padding: 12px 0;
+    padding: 10px 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -83,7 +83,7 @@ body {
 
 .nav {
     width: 100%;
-    padding: 26px 24px;
+    padding: 10px 24px;
 
     display: flex;
     justify-content: space-between;
@@ -333,7 +333,7 @@ body {
     background-color: #F7ECEC; /* Цвет фона самого div */
     border-radius: 12px; /* Скругление внутреннего края */
     z-index: 0; /* Чтобы контент был поверх псевдоэлемента */
-    margin: 25px; /* Отступ для padding */
+    margin: -15px; /* Отступ для padding */
 }
 
 .colum .plashka:first-child {
@@ -376,7 +376,7 @@ body {
     border: none;
     border-radius: 1000px;
 
-    background-color: #77b9a1;
+    background-color: #E0DADA;
 }
 
 .next_btn:first-child {
@@ -965,13 +965,29 @@ body {
     display: none;
 }
 
-#leftButton {
+#leftButton::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    filter: invert(1);
     background-image: url(img/Polygon_10.svg);
     background-position: center;
     background-repeat: no-repeat;
 }
 
-#rightButton {
+#rightButton::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    filter: invert(1);
     background-image: url(img/Polygon_9.svg);
     background-position: center;
     background-repeat: no-repeat;
@@ -1438,7 +1454,7 @@ body {
 }
 
 .next_btn:hover {
-    background-color: #2d2d2d;
+    background-color: #a5a4a4;
 }
 
 .plashka_btn:hover {
